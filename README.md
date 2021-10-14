@@ -1,6 +1,5 @@
 # Vector-Quantized Timbre Representation (Bitton et al. 2020)
 <hr>
-
 Implementation of the paper [Vector-Quantized Timbre Representation](https://arxiv.org/pdf/2007.06349.pdf)
 
 Developed with [Adán Benito](https://github.com/adanlbenito) early in 2021
