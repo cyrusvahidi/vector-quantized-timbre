@@ -10,6 +10,7 @@ Developed with [Adán Benito](https://github.com/adanlbenito) early in 2021
 
 ## Setup
 <hr>
+
 ```
 pip install -r requirements.txt
 pip install -e .
@@ -25,6 +26,7 @@ Then, set the `URMP_DATA_DIR` variable in `gin_configs/vqvae_timbre.gin` to `<nu
 
 ## Training
 <hr>
+
 `python scripts/run_train.py`
 
 * Most hyperparameters are configured with `gin-config`
