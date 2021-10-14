@@ -29,8 +29,12 @@ Then, set the `URMP_DATA_DIR` variable in `gin_configs/vqvae_timbre.gin` to `<nu
 `python scripts/run_train.py`
 
 * Most hyperparameters are configured with `gin-config`
+* set `URMP.instr_ids= [<instrument_id>]` to train for a target musical instrument
 * To log to wandb, enable `lightning_run.logger = True` in `gin_configs/vqvae_timbre.gin`
 
 ## Evaluation
 --- 
-* 
+* download model checkpoint for a model trained on Violin: `https://drive.google.com/file/d/1fJ9bkM5eAuCNz4DClfeTm6b-IKjkTs0y/view?usp=sharing`  
+* put it in `/checkpoints`
+* `jupyter notebook`
+* see `notebooks/eval_model.ipynb` for simple timbre transfer and feature-based synthesis

@@ -24,8 +24,6 @@ TRUMPET = 'tpt'
 HORN = 'hn' 
 TROMBONE = 'tbn'
 TUBE = 'tba'
-all_instruments = [%VIOLIN, %VIOLA, %CELLO, %DOUBLE_BASS, %FLUTE, %OBOE, %CLARINET, %SAX, %BASSOON, %TRUMPET, %HORN, %TROMBONE, %TUBE]
-subset = [%VIOLIN, %SAX, %CELLO, %FLUTE, %TROMBONE]
 
 
 # audio preprocessing parameters
