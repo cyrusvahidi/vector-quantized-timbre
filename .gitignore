@@ -9,4 +9,9 @@ lightning_logs*
 *wandb*
 *vq-vae-timbre-scripts*
 *checkpoints
+<<<<<<< HEAD
+=======
+*notebooks
+*.ipynb
+>>>>>>> 2585b54bb61ed4434f1219bc984e97fb5a607818
 
