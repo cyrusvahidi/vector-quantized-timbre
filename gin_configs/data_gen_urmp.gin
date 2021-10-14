@@ -1,0 +1,12 @@
+import vq_nsf
+
+sample_rate = 16000
+
+# audio preprocessing parameters
+resample_audio.original_sr = 48000
+resample_audio.target_sr = %sample_rate
+
+load_audio_file.preprocessors = [
+    @normalize_audio,
+    @resample_audio
+]

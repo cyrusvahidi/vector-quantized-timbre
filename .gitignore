@@ -1,0 +1,14 @@
+.ipynb_checkpoints*
+
+__pycache__
+
+lightning_logs*
+*.wav
+
+*.egg-info
+*wandb*
+*vq-vae-timbre-scripts*
+*checkpoints
+*notebooks
+*.ipynb
+
