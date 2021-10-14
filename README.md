@@ -29,8 +29,6 @@ Then, set the `URMP_DATA_DIR` variable in `gin_configs/vqvae_timbre.gin` to `<nu
 * To log to wandb, enable `lightning_run.logger = True` in `gin_configs/vqvae_timbre.gin`
 
 ## Evaluation
-<hr>
-
 * download model checkpoint for a model trained on Violin: `https://drive.google.com/file/d/1fJ9bkM5eAuCNz4DClfeTm6b-IKjkTs0y/view?usp=sharing`  
 * put it in `/checkpoints`
 * `jupyter notebook`
