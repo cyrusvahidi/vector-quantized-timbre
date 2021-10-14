@@ -5,7 +5,8 @@ Implementation of the paper [Vector-Quantized Timbre Representation](https://arx
 Developed with [Adán Benito](https://github.com/adanlbenito) early in 2021
 
 * This repository contains a Pytorch Lightning framework to train a model similar to the one described in the paper. 
-* The main difference is the use of an exponential moving-average (EMA) codebook. Without this, the codebook collapsed `perplexity = 1`.
+* The main difference is the use of an exponential moving-average (EMA) codebook
+* With a conventional VQ codebook the codebook collapsed `perplexity = 1`.
 * Data splits and preprocessing are performed for the URMP western musical instrument dataset
 
 ## Usage
