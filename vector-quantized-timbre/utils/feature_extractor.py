@@ -4,7 +4,7 @@ import librosa.display
 import matplotlib.pyplot as plt
 
 class FeatureExtractor:
-<<<<<<< HEAD
+
     def __init__(
         self,
         audio=None,
@@ -13,15 +13,6 @@ class FeatureExtractor:
         stride=512,
         center=True
     ):
-=======
-    def __init__(self,
-            audio=None,
-            fs=16000,
-            wsize=2048,
-            stride=512,
-            center=True
-            ):
->>>>>>> 2585b54bb61ed4434f1219bc984e97fb5a607818
         super().__init__()
 
         self._p = {
@@ -98,18 +89,11 @@ class FeatureExtractor:
             fig, ax = plt.subplots()
 
         img = librosa.display.specshow(
-<<<<<<< HEAD
             librosa.amplitude_to_db(
                 features['spectrogram']['mag'], ref=np.max),
                 y_axis='log',
                 x_axis='time',
                 ax=ax
-=======
-            librosa.amplitude_to_db(features['spectrogram']['mag'], ref=np.max),
-            y_axis='log',
-            x_axis='time',
-            ax=ax
->>>>>>> 2585b54bb61ed4434f1219bc984e97fb5a607818
             )
         if title:
             ax.set(title=title)
@@ -208,14 +192,8 @@ class FeatureExtractor:
         _stats_dict = {}
         for ft_name, ft_val in features.items():
             _isarray, value = self.is_array(ft_val)
-<<<<<<< HEAD
             if _isarray:
                 _stats_dict[ft_name] = {
-=======
-            if not _isarray:
-                break
-            _stats_dict[ft_name] = {
->>>>>>> 2585b54bb61ed4434f1219bc984e97fb5a607818
                     'mean': np.nanmean(value, axis=_axis),
                     'std': np.nanstd(value, axis=_axis)
                     }
