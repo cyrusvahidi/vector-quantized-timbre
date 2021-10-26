@@ -138,7 +138,7 @@ traitlets==5.0.5
 typed-ast==1.4.2
 typing-extensions==3.7.4.3
 urllib3==1.26.3
--e git+https://github.com/adanlbenito/vq-vae-timbre.git@37b05d434fb528bc04de19dd1d690b62b78607b0#egg=vqvae_timbre
+-e git+https://github.com/adanlbenito/vq-vae-timbre.git@37b05d434fb528bc04de19dd1d690b62b78607b0#egg=vq_timbre
 wandb==0.10.22
 wcwidth==0.2.5
 webencodings==0.5.1

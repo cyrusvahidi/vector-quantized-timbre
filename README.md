@@ -18,7 +18,7 @@ Data splits and preprocessing are performed for the URMP western musical instrum
 To split the URMP dataset into 3 second numpy files for efficient loading:
 `python scripts/urmp_numpy_segments.py <path_to_URMP> <numpy_out_dir>`
 
-Then, set the `URMP_DATA_DIR` variable in `gin_configs/vqvae_timbre.gin` to `<numpy_out_dir>`
+Then, set the `URMP_DATA_DIR` variable in `gin_configs/vq_timbre.gin` to `<numpy_out_dir>`
 
 ## Training
 
@@ -26,7 +26,7 @@ Then, set the `URMP_DATA_DIR` variable in `gin_configs/vqvae_timbre.gin` to `<nu
 
 * Most hyperparameters are configured with `gin-config`
 * set `URMP.instr_ids= [<instrument_id>]` to train for a target musical instrument
-* To log to wandb, enable `lightning_run.logger = True` in `gin_configs/vqvae_timbre.gin`
+* To log to wandb, enable `lightning_run.logger = True` in `gin_configs/vq_timbre.gin`
 
 ## Evaluation
 * download model checkpoint for a model trained on Violin: `https://drive.google.com/file/d/1fJ9bkM5eAuCNz4DClfeTm6b-IKjkTs0y/view?usp=sharing`  

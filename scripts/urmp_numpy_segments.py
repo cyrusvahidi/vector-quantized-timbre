@@ -3,8 +3,8 @@ import gin
 from tqdm import tqdm
 import os
 
-from vqvae_timbre.models import lightning_run
-from vqvae_timbre.utils import (
+from vq_timbre.models import lightning_run
+from vq_timbre.utils import (
   create_numpy_files, 
   make_directory, 
   gin_register_and_parse,

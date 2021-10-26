@@ -1,14 +1,11 @@
-import vqvae_timbre
-import vqvae_timbre.modules
-import vqvae_timbre.datasets
-import vqvae_timbre.utils
+import vq_timbre
+import vq_timbre.modules
+import vq_timbre.datasets
+import vq_timbre.utils
 import torch
 
 sample_rate = 16000
 input_length = 3
-
-META_CSV_PATH = "vector-quantized-timbre/datasets/file_split_info.csv"
-URMP_DATA_DIR = "/import/c4dm-datasets/URMP-split/npy-3-secs/"
 
 # URMP INSTURMENT IDS
 VIOLIN = 'vn'
@@ -24,12 +21,10 @@ TRUMPET = 'tpt'
 HORN = 'hn' 
 TROMBONE = 'tbn'
 TUBE = 'tba'
-<<<<<<< HEAD
-=======
 all_instruments = [%VIOLIN, %VIOLA, %CELLO, %DOUBLE_BASS, %FLUTE, %OBOE, %CLARINET, %SAX, %BASSOON, %TRUMPET, %HORN, %TROMBONE, %TUBE]
 subset = [%VIOLIN, %SAX, %CELLO, %FLUTE, %TROMBONE]
->>>>>>> 2585b54bb61ed4434f1219bc984e97fb5a607818
-
+META_CSV_PATH = "/import/c4dm-datasets/URMP-split//meta/file_split_info.csv"
+URMP_DATA_DIR = "/import/c4dm-datasets/URMP-split/npy-3-secs/"
 
 # audio preprocessing parameters
 resample_audio.original_sr = 48000
@@ -49,16 +44,15 @@ get_urmp_files.f0_suffix = '.npy'
 URMP.input_length = %input_length
 URMP.sr = %sample_rate
 URMP.instr_ids = [%VIOLIN]
+
 URMP.audio_load_fn = @load_numpy
 URMP.csv_path = %META_CSV_PATH
-
-URMPDataModule.loader = @URMPJTFS
 
 # Training
 VQTimbreModule.reconstruction_loss = @MultiResolutionSTFTLoss()
 VQTimbreModule.lr = 0.0002
 
+lightning_run.n_epochs = 50
 lightning_run.batch_size = 4
 lightning_run.max_steps = 150000
 lightning_run.data_module = @URMPDataModule
-lightning_run.logger = False
